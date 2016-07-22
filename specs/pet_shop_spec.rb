@@ -112,10 +112,10 @@ class TestPetShop < Minitest::Test
     assert_equal(count,6)
   end
 
-  # def test_all_pets_by_breed__found
-  #   pets = pets_by_breed(@pet_shop, "British Shorthair")
-  #   assert_equal(pets.count, 2)
-  # end
+  def test_all_pets_by_breed__found
+    pets = pets_by_breed(@pet_shop, "British Shorthair")
+    assert_equal(pets.count, 2)
+  end
 
   # def test_all_pets_by_breed__not_found
   #   pets = pets_by_breed(@pet_shop, "Dalmation")
