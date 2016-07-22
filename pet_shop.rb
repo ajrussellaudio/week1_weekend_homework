@@ -22,24 +22,24 @@ def stock_count(shop)
   return shop[:pets].count
 end
 
-def pets_by_breed(shop, breed)
+def pets_by_breed(shop, breed_search)
   stock = []
   for pet in shop[:pets]
-    stock << pet if pet[:breed] == breed
+    stock << pet if pet[:breed] == breed_search
   end
   return stock
 end
 
-def find_pet_by_name(shop, name)
+def find_pet_by_name(shop, name_search)
   for pet in shop[:pets]
-    return pet if pet[:name] == name
+    return pet if pet[:name] == name_search
   end
   return nil
 end
 
-def remove_pet_by_name(shop, name)
+def remove_pet_by_name(shop, name_search)
   for pet in shop[:pets]
-    shop[:pets].delete(pet) if pet[:name] == name
+    shop[:pets].delete(pet) if pet[:name] == name_search
   end
 end
 
